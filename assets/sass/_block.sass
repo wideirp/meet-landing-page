@@ -1,0 +1,19 @@
+@use "variables" as *
+
+.hero
+  .hero__image
+    display: flex
+    justify-content: center
+    align-content: center
+    overflow: hidden
+    img
+      max-width: 115%
+  @media (min-width: 30rem)
+    .wrapper
+      .btn-group
+        flex-direction: row
+        justify-content: center
+        .btn 
+          margin: 0
+
+

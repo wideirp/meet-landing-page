@@ -14,19 +14,33 @@
 
     <title>Frontend Mentor | Meet landing page</title>
   </head>
-  <body class="[ flow ]">
-    <nav><img src="assets/images/logo.svg" alt="" /></nav>
+  <body class="[ flow-4 ]">
+    <nav><img src="assets/images/logo.svg" alt="meet logo" /></nav>
     <section class="hero">
-      <img src="assets/images/tablet/image-hero.png" alt="" />
-      <h1 class="[ text-preset-1 ]">Group Chat for Everyone</h1>
-      <p class="[ text-preset-4 ]">
-        Meet makes it easy to connect with others face-to-face virtually and
-        collaborate across any device.
-      </p>
-      <button class="[ text-preset-5 ]">Download v1.3</button>
-      <button class="[ text-preset-5 ]">What is it?</button>
+      <picture class="hero__image">
+        <source
+          srcset="assets/images/desktop/image-hero-left.png"
+          media="(min-width: 49rem)"
+        />
+        <img src="assets/images/tablet/image-hero.png" alt="" />
+      </picture>
+      <div class="[ wrapper flow-1_5 ] [ mt-3 ]">
+        <h1 class="[ text-preset-1 ]">Group Chat for Everyone</h1>
+        <p class="[ text-preset-4 ]">
+          Meet makes it easy to connect with others face-to-face virtually and
+          collaborate across any device.
+        </p>
+        <div class="btn-group [ flex-vc ]">
+          <button class="[ text-preset-5 btn ]" data-state="primary">
+            Download v1.3
+          </button>
+          <button class="[ text-preset-5 btn ]" data-state="secondary">
+            What is it?
+          </button>
+        </div>
+      </div>
     </section>
-    <main>
+    <main class="[ wrapper ]">
       <div class="[ text-preset-5 ]">01</div>
       <div class="image-collage">
         <img src="assets/images/desktop/image-woman-in-videocall.jpg" alt="" />
@@ -45,7 +59,7 @@
       </div>
     </main>
 
-    <footer>
+    <footer class="[ wrapper ]">
       <div class="[ text-preset-5 ]">02</div>
       <div class="">
         <h2 class="[ text-preset-2 ]">Experience more together</h2>
@@ -53,7 +67,9 @@
           Stay connected with reliable HD meetings and unlimited one-on-one and
           group video sessions.
         </p>
-        <button class="[ text-preset-5 ]">Download v1.3</button>
+        <button class="[ text-preset-5 btn ]" data-state="primary">
+          Download v1.3
+        </button>
       </div>
     </footer>
   </body>

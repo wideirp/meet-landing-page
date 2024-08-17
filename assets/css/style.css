@@ -91,12 +91,8 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
-.text-preset-1 {
-  font-family: "Red Hat Display", san-serif;
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: 0px;
+h1 {
+  margin: 0;
 }
 
 body {
@@ -106,13 +102,21 @@ body {
   margin: clamp(3rem, 1rem + 7vw, 5rem) 0 0 0;
 }
 
-.flow > * + * {
+.flow-2_5 > * + * {
+  margin-top: 2.5rem;
+}
+
+.flow-1_5 > * + * {
+  margin-top: 1.5rem;
+}
+
+.flow-4 > * + * {
   margin-top: 4rem;
 }
 
 .text-preset-1 {
   font-family: "Red Hat Display", san-serif;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 1rem + 7vw, 4rem);
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: 0px;
@@ -140,7 +144,7 @@ body {
 
 .text-preset-4 {
   font-family: "Red Hat Display", san-serif;
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 0.125rem + 1.7vw, 1.125rem);
   font-weight: 500;
   line-height: 1.1;
   letter-spacing: 0px;
@@ -156,4 +160,61 @@ body {
   letter-spacing: 0px;
   color: #fafafa;
   text-align: center;
+}
+
+.wrapper {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.flex-vc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  margin: 0 auto;
+  padding: 1rem 2.5rem;
+  outline: none;
+  border: none;
+  border-radius: 29px;
+}
+
+.hero .hero__image {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+.hero .hero__image img {
+  max-width: 115%;
+}
+@media (min-width: 30rem) {
+  .hero .wrapper .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .hero .wrapper .btn-group .btn {
+    margin: 0;
+  }
+}
+
+button[data-state=primary] {
+  background-color: #4d96a9;
+}
+button[data-state=primary]:hover {
+  background-color: #8fe3f9;
+}
+
+button[data-state=secondary] {
+  background-color: #855fb1;
+}
+button[data-state=secondary]:hover {
+  background-color: #d9b8ff;
 }/*# sourceMappingURL=style.css.map */
