@@ -95,6 +95,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  margin: 1rem 0 2rem 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -103,6 +107,14 @@ body {
 }
 body .hero .hero__image-right {
   display: none;
+}
+body main .main__image-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+body main .main__image-collage img {
+  border-radius: 8px;
 }
 
 @media (min-width: 62rem) {
@@ -152,7 +164,7 @@ body .hero .hero__image-right {
 
 .text-preset-2 {
   font-family: "Red Hat Display", san-serif;
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 1rem + 3vw, 2.5rem);
   font-weight: 900;
   line-height: 1.1;
   letter-spacing: 0px;
@@ -201,6 +213,7 @@ body .hero .hero__image-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -231,23 +244,28 @@ body .hero .hero__image-right {
   }
 }
 
-.section-number {
+.main__section-number {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
   color: #87879d;
   border: 1px solid #87879d;
   border-radius: 50%;
   width: 56px;
   height: 56px;
 }
-.section-number:first-child::before {
+.main__section-number:first-child::before {
   top: -80px;
   content: "";
   height: 80px;
   position: absolute;
   border: 1px solid #87879d;
+}
+
+.main__subheading {
+  color: #4d96a9;
 }
 
 button[data-state=primary] {

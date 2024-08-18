@@ -17,7 +17,7 @@
   text-align: center
 
 .text-preset-2
-  @include text-preset($size: 2.5rem, $weight: 900, $lh: 1.1, $ls: 0px)
+  @include text-preset($size: clamp(2rem, calc(1rem + 3vw), 2.5rem), $weight: 900, $lh: 1.1, $ls: 0px)
   text-align: center
 
 .text-preset-3
@@ -45,6 +45,7 @@
   display: flex
   flex-direction: column
   justify-content: center
+  align-items: center
   gap: 1rem
 
 .btn
