@@ -30,6 +30,20 @@ body
     background-repeat: no-repeat
     background-color: color.adjust($clr-primary-600)
     background-blend-mode: color-burn
+    width: 100%
+    @media (min-width: 30rem)
+      background-image: url('../images/tablet/image-footer.jpg')
+    @media (min-width: 48rem)
+      background-image: url('../images/desktop/image-footer.jpg')
+      .footer__text
+        max-width: 80rem
+        flex-direction: row
+        
+        h2, p
+          text-align: left
+          width: 35%
+        .btn
+          margin-right: 0
     .section-number
       position: absolute
       top: calc(-80px - 56px / 2)

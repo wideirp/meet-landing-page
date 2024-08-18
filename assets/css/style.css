@@ -289,6 +289,28 @@ body .footer {
   background-repeat: no-repeat;
   background-color: #4d96a9;
   background-blend-mode: color-burn;
+  width: 100%;
+}
+@media (min-width: 30rem) {
+  body .footer {
+    background-image: url("../images/tablet/image-footer.jpg");
+  }
+}
+@media (min-width: 48rem) {
+  body .footer {
+    background-image: url("../images/desktop/image-footer.jpg");
+  }
+  body .footer .footer__text {
+    max-width: 80rem;
+    flex-direction: row;
+  }
+  body .footer .footer__text h2, body .footer .footer__text p {
+    text-align: left;
+    width: 35%;
+  }
+  body .footer .footer__text .btn {
+    margin-right: 0;
+  }
 }
 body .footer .section-number {
   position: absolute;
