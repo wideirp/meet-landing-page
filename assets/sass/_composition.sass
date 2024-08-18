@@ -8,6 +8,13 @@ body
   nav
     margin-top: clamp($spacer-600, calc(1rem + 7vw), $spacer-1000)
   .hero
+    .hero__image-left
+      display: flex
+      justify-content: center
+      align-content: center
+      overflow: hidden
+      img
+          max-width: 115%
     .hero__image-right
       display: none
   main
@@ -17,7 +24,6 @@ body
       gap: 1rem
       img
         border-radius: 8px
-
 @media (min-width: 48rem)
   body
     main
@@ -34,6 +40,7 @@ body
     .hero
       display: grid
       grid-template-columns: 1fr 1fr 1fr
+      gap: clamp(0.5rem, calc(1rem + 1vw), 3rem)
       .hero__text-content
         margin: 0
         min-width: 24rem
@@ -41,8 +48,22 @@ body
       .hero__image-right
         display: flex
         justify-content: right
+        align-items: center
         overflow: hidden
+        transform-origin: right bottom
         img
           max-width: none
       .hero__image-right
         justify-content: left
+        transform-origin: left top
+
+@media (min-width: 80rem)
+  body
+    .hero
+      overflow-x: clip
+      .hero__image-left,
+      .hero__image-right
+        transform: scale(1.2)
+        
+
+        

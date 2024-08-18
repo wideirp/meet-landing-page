@@ -108,6 +108,15 @@ body {
 body nav {
   margin-top: clamp(3rem, 1rem + 7vw, 5rem);
 }
+body .hero .hero__image-left {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+body .hero .hero__image-left img {
+  max-width: 115%;
+}
 body .hero .hero__image-right {
   display: none;
 }
@@ -136,6 +145,7 @@ body main .main__image-collage img {
   body .hero {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: clamp(0.5rem, 1rem + 1vw, 3rem);
   }
   body .hero .hero__text-content {
     margin: 0;
@@ -145,7 +155,9 @@ body main .main__image-collage img {
   body .hero .hero__image-right {
     display: flex;
     justify-content: right;
+    align-items: center;
     overflow: hidden;
+    transform-origin: right bottom;
   }
   body .hero .hero__image-left img,
   body .hero .hero__image-right img {
@@ -153,6 +165,16 @@ body main .main__image-collage img {
   }
   body .hero .hero__image-right {
     justify-content: left;
+    transform-origin: left top;
+  }
+}
+@media (min-width: 80rem) {
+  body .hero {
+    overflow-x: clip;
+  }
+  body .hero .hero__image-left,
+  body .hero .hero__image-right {
+    transform: scale(1.2);
   }
 }
 .flow-2_5 > * + * {
@@ -260,15 +282,6 @@ body main .main__image-collage img {
   border: 1px solid #87879d;
 }
 
-body .hero .hero__image-left {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  overflow: hidden;
-}
-body .hero .hero__image-left img {
-  max-width: 115%;
-}
 @media (min-width: 30rem) {
   body .hero .wrapper .btn-group {
     flex-direction: row;
