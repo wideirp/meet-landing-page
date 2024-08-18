@@ -310,13 +310,25 @@ body .footer .footer__text p {
 button[data-state=primary] {
   background-color: #4d96a9;
 }
+button[data-state=primary] span {
+  color: #8fe3f9;
+}
 button[data-state=primary]:hover {
   background-color: #8fe3f9;
+}
+button[data-state=primary]:hover span {
+  color: #4d96a9;
 }
 
 button[data-state=secondary] {
   background-color: #855fb1;
 }
+button[data-state=secondary] span {
+  color: #d9b8ff;
+}
 button[data-state=secondary]:hover {
   background-color: #d9b8ff;
+}
+button[data-state=secondary]:hover span {
+  color: #855fb1;
 }/*# sourceMappingURL=style.css.map */
