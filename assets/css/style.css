@@ -103,7 +103,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: clamp(3rem, 1rem + 7vw, 5rem) 0 0 0;
+  margin: 0;
+}
+body nav {
+  margin-top: clamp(3rem, 1rem + 7vw, 5rem);
 }
 body .hero .hero__image-right {
   display: none;
@@ -237,26 +240,7 @@ body main .main__image-collage img {
   border-radius: 29px;
 }
 
-.hero .hero__image-left {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  overflow: hidden;
-}
-.hero .hero__image-left img {
-  max-width: 115%;
-}
-@media (min-width: 30rem) {
-  .hero .wrapper .btn-group {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .hero .wrapper .btn-group .btn {
-    margin: 0;
-  }
-}
-
-.main__section-number {
+.section-number {
   position: relative;
   display: flex;
   justify-content: center;
@@ -268,7 +252,7 @@ body main .main__image-collage img {
   width: 56px;
   height: 56px;
 }
-.main__section-number:first-child::before {
+.section-number:first-child::before {
   top: -80px;
   content: "";
   height: 80px;
@@ -276,8 +260,51 @@ body main .main__image-collage img {
   border: 1px solid #87879d;
 }
 
-.main__subheading {
+body .hero .hero__image-left {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+body .hero .hero__image-left img {
+  max-width: 115%;
+}
+@media (min-width: 30rem) {
+  body .hero .wrapper .btn-group {
+    flex-direction: row;
+    justify-content: center;
+  }
+  body .hero .wrapper .btn-group .btn {
+    margin: 0;
+  }
+}
+body .main__subheading {
   color: #4d96a9;
+}
+body .footer {
+  position: relative;
+  margin-top: 188px;
+  background-image: url("../images/mobile/image-footer.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #4d96a9;
+  background-blend-mode: color-burn;
+}
+body .footer .section-number {
+  position: absolute;
+  top: -108px;
+  background-color: #fafafa;
+}
+body .footer .footer__text {
+  margin: 4rem 2rem;
+}
+body .footer .footer__text h2 {
+  margin: 0;
+  color: #fafafa;
+}
+body .footer .footer__text p {
+  margin: 0;
+  color: #fafafa;
 }
 
 button[data-state=primary] {

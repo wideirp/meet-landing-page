@@ -54,3 +54,21 @@
   outline: none
   border: none
   border-radius: 29px
+
+.section-number
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-top: 80px
+  &:first-child::before
+    top:-80px
+    content: ""
+    height: 80px
+    position: absolute
+    border: 1px solid $clr-neutral-600
+  color: $clr-neutral-600
+  border: 1px solid $clr-neutral-600
+  border-radius: 50%
+  width: 56px
+  height: 56px

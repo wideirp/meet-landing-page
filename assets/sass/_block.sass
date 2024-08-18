@@ -1,38 +1,45 @@
 @use "variables" as *
+@use "sass:color"
 
-.hero
-  .hero__image-left
-    display: flex
-    justify-content: center
-    align-content: center
-    overflow: hidden
-    img
-      max-width: 115%
-  @media (min-width: 30rem)
-    .wrapper
-      .btn-group
-        flex-direction: row
-        justify-content: center
-        .btn 
-          margin: 0
+body
+  .hero
+    .hero__image-left
+      display: flex
+      justify-content: center
+      align-content: center
+      overflow: hidden
+      img
+        max-width: 115%
+    @media (min-width: 30rem)
+      .wrapper
+        .btn-group
+          flex-direction: row
+          justify-content: center
+          .btn 
+            margin: 0
 
-.main__section-number
-  position: relative
-  display: flex
-  justify-content: center
-  align-items: center
-  margin-top: 80px
-  &:first-child::before
-    top:-80px
-    content: ""
-    height: 80px
-    position: absolute
-    border: 1px solid $clr-neutral-600
-  color: $clr-neutral-600
-  border: 1px solid $clr-neutral-600
-  border-radius: 50%
-  width: 56px
-  height: 56px
+  .main__subheading
+    color: $clr-primary-600
 
-.main__subheading
-  color: $clr-primary-600
+
+  .footer
+    position: relative
+    margin-top: calc(calc(80px + 56px / 2) + 80px)
+    background-image: url('../images/mobile/image-footer.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    background-color: color.adjust($clr-primary-600)
+    background-blend-mode: color-burn
+    .section-number
+      position: absolute
+      top: calc(-80px - 56px / 2)
+      background-color: $clr-neutral-100
+    .footer__text
+      margin: 4rem 2rem
+      h2
+        margin: 0
+        color: $clr-neutral-100
+      p
+        margin: 0
+        color: $clr-neutral-100
+

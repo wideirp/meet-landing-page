@@ -4,7 +4,9 @@ body
   display: flex
   flex-direction: column
   align-items: center
-  margin: clamp($spacer-600, calc(1rem + 7vw), $spacer-1000) 0 0 0
+  margin: 0
+  nav
+    margin-top: clamp($spacer-600, calc(1rem + 7vw), $spacer-1000)
   .hero
     .hero__image-right
       display: none
@@ -25,7 +27,6 @@ body
         margin-top: 4rem
       .main__text-content
         max-width: 40rem
-        h2
         
 
 @media (min-width: 62rem)
