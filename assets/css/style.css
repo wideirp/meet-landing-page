@@ -231,6 +231,25 @@ body .hero .hero__image-right {
   }
 }
 
+.section-number {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #87879d;
+  border: 1px solid #87879d;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+}
+.section-number:first-child::before {
+  top: -80px;
+  content: "";
+  height: 80px;
+  position: absolute;
+  border: 1px solid #87879d;
+}
+
 button[data-state=primary] {
   background-color: #4d96a9;
 }

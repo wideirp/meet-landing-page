@@ -16,4 +16,20 @@
         .btn 
           margin: 0
 
+.section-number
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  &:first-child::before
+    top:-80px
+    content: ""
+    height: 80px
+    position: absolute
+    border: 1px solid $clr-neutral-600
+  color: $clr-neutral-600
+  border: 1px solid $clr-neutral-600
+  border-radius: 50%
+  width: 56px
+  height: 56px
 
