@@ -116,7 +116,6 @@ body .hero .hero__image-right {
   }
   body .hero .hero__image-left,
   body .hero .hero__image-right {
-    background-color: red;
     display: flex;
     justify-content: right;
     overflow: hidden;
