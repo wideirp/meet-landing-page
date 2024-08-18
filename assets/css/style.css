@@ -117,6 +117,18 @@ body main .main__image-collage img {
   border-radius: 8px;
 }
 
+@media (min-width: 48rem) {
+  body main {
+    max-width: 80rem;
+  }
+  body main .main__image-collage {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 4rem;
+  }
+  body main .main__text-content {
+    max-width: 40rem;
+  }
+}
 @media (min-width: 62rem) {
   body .hero {
     display: grid;
